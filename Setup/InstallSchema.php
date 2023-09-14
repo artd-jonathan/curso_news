@@ -30,35 +30,35 @@ class InstallSchema implements InstallSchemaInterface
                     \Magento\Framework\DB\Ddl\Table::TYPE_TEXT,
                     255,
                     ['nullable' => false, 'default' => ''],
-                        'Title'
+                    'Title'
                 )
                 ->addColumn(
                     'description',
                     \Magento\Framework\DB\Ddl\Table::TYPE_TEXT,
                     null,
                     ['nullable' => false, 'default' => ''],
-                        'Description'
+                    'Description'
                 )
                 ->addColumn(
                     'status',
                     \Magento\Framework\DB\Ddl\Table::TYPE_BOOLEAN,
                     null,
                     ['nullable' => false, 'unsigned' => true],
-                        'Status'
+                    'Status'
                 )
                 ->addColumn(
                     'created_at',
-                    \Magento\Framework\DB\Ddl\Table::TYPE_DATETIME,
+                    \Magento\Framework\DB\Ddl\Table::TYPE_TIMESTAMP,
                     null,
-                    ['nullable' => false],
-                        'Created At'
+                    ['nullable' => false, 'default' => \Magento\Framework\DB\Ddl\Table::TIMESTAMP_INIT],
+                    'Created At'
                 )
                 ->addColumn(
                     'updated_at',
-                    \Magento\Framework\DB\Ddl\Table::TYPE_DATETIME,
+                    \Magento\Framework\DB\Ddl\Table::TYPE_TIMESTAMP,
                     null,
-                    ['nullable' => false],
-                        'Updated At'
+                    ['nullable' => false, 'default' => \Magento\Framework\DB\Ddl\Table::TIMESTAMP_INIT_UPDATE],
+                    'Updated At'
                 )
                 ->addIndex(
                     $setup->getIdxName('curso_news', ['title']),

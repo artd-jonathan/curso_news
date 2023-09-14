@@ -30,15 +30,11 @@ class InstallData implements InstallDataInterface
                 'title' => 'News Title # 1',
                 'description' => 'Here is write news description # 1',
                 'status' => 1,
-                'updated_at' => $this->date->date(),
-                'created_at' => $this->date->date()
             ],
             [
                 'title' => 'News Title # 2',
                 'description' => 'Here is write news description # 2',
                 'status' => 1,
-                'updated_at' => $this->date->date(),
-                'created_at' => $this->date->date()
             ]
         ];
         
