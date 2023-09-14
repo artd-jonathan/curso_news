@@ -5,6 +5,9 @@ use Magento\Framework\Model\AbstractModel;
 
 class Allnews extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb
 {
+    /**
+     * @var datetime
+     */
 	protected $_date;
 	
 	public function __construct(
@@ -22,7 +25,10 @@ class Allnews extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb
 	{
 		$this->_init('curso_news', 'news_id');
 	}
-	
+	/**
+     * @param \Magento\Framework\Model\AbstractModel $object
+     * @return void
+     */
 	protected function _beforeSave(\Magento\Framework\Model\AbstractModel $object)
     {
         $object->setUpdatedAt($this->_date->date());

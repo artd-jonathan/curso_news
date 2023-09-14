@@ -1,12 +1,13 @@
 <?php
 namespace Curso\News\Model;
 
+use Curso\News\Api\Data\AllnewsInterface;
 use Magento\Framework\App\Config\ScopeConfigInterface;
 use Magento\Framework\DataObject\IdentityInterface;
 use Magento\Framework\Exception\LocalizedException;
 use Magento\Framework\Model\AbstractModel;
 
-class Allnews extends AbstractModel 
+class Allnews extends AbstractModel
 {
 	const STATUS_ENABLED = 1;
     const STATUS_DISABLED = 0;
@@ -20,17 +21,26 @@ class Allnews extends AbstractModel
     {
         $this->_init('Curso\News\Model\ResourceModel\Allnews');
     }
-	
+	/**
+     * @return array
+     */
     public function getIdentities()
     {
         return [self::CACHE_TAG . '_' . $this->getId()];
     }
-
+    /**
+     * @return array
+     */
     public function getDefaultValues()
     {
         $values = [];
         return $values;
     }
-	
-	
+	/**
+     * @return array
+     */
+	public function getAvailableStatuses()
+    {
+        return [self::STATUS_ENABLED => __('Enabled'), self::STATUS_DISABLED => __('Disabled')];
+    }
 }
