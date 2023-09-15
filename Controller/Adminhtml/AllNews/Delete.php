@@ -1,5 +1,4 @@
 <?php
-
 namespace Curso\News\Controller\Adminhtml\Allnews;
 
 class Delete extends \Magento\Backend\App\Action

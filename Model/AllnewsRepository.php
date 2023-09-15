@@ -16,15 +16,10 @@ use Magento\Store\Model\StoreManagerInterface;
 class AllnewsRepository implements AllnewsRepositoryInterface
 {
     protected $resource;
-
     protected $allnewsFactory;
-
     protected $dataObjectHelper;
-
     protected $dataObjectProcessor;
-
     protected $dataAllnewsFactory;
-
     private $storeManager;
 
     public function __construct(
@@ -42,7 +37,12 @@ class AllnewsRepository implements AllnewsRepositoryInterface
 		$this->dataObjectProcessor = $dataObjectProcessor;
         $this->storeManager = $storeManager;
     }
-
+    /**
+     * Save method
+     *
+     * @param \Curso\News\Api\Data\AllnewsInterface $news
+     * @return \Curso\News\Api\Data\AllnewsInterface 
+     */
     public function save(\Curso\News\Api\Data\AllnewsInterface $news)
     {
         if ($news->getStoreId() === null) {
@@ -59,7 +59,12 @@ class AllnewsRepository implements AllnewsRepositoryInterface
         }
         return $news;
     }
-
+    /**
+     * Get by ID
+     *
+     * @param string|int $newsId
+     * @return object
+     */
     public function getById($newsId)
     {
 		$news = $this->allnewsFactory->create();
@@ -69,7 +74,12 @@ class AllnewsRepository implements AllnewsRepositoryInterface
         }
         return $news;
     }
-	
+	/**
+     * Delete an element
+     *
+     * @param \Curso\News\Api\Data\AllnewsInterface $news
+     * @return boolean
+     */
     public function delete(\Curso\News\Api\Data\AllnewsInterface $news)
     {
         try {
@@ -82,7 +92,12 @@ class AllnewsRepository implements AllnewsRepositoryInterface
         }
         return true;
     }
-
+    /**
+     * Delete by ID
+     *
+     * @param string|int $newsId
+     * @return void
+     */
     public function deleteById($newsId)
     {
         return $this->delete($this->getById($newsId));

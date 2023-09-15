@@ -9,7 +9,6 @@ use Magento\Framework\Exception\NoSuchEntityException;
 class GenericButton
 {
     protected $context;
-   
     protected $allnewsRepository;
     
     public function __construct(

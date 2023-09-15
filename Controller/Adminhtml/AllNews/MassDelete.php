@@ -1,5 +1,4 @@
 <?php
-
 namespace Curso\News\Controller\Adminhtml\Allnews;
 
 use Magento\Framework\Controller\ResultFactory;

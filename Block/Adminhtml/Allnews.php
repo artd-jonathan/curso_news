@@ -17,7 +17,10 @@ class Allnews extends \Magento\Backend\Block\Widget\Grid\Container
             $this->buttonList->remove('add');
         }
     }
-
+    /**
+     * @param [type] $resourceId
+     * @return void
+     */
     protected function _isAllowedAction($resourceId)
     {
         return $this->_authorization->isAllowed($resourceId);

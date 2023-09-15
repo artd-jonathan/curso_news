@@ -1,5 +1,4 @@
 <?php
-
 namespace Curso\News\Model\Allnews\Source;
 
 use Magento\Framework\Data\OptionSourceInterface;
@@ -12,7 +11,10 @@ class Status implements OptionSourceInterface
     {
         $this->allNews = $allNews;
     }
-
+    /**
+     *
+     * @return array
+     */
     public function toOptionArray()
     {
         $availableOptions = $this->allNews->getAvailableStatuses();

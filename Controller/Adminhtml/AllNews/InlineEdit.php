@@ -80,12 +80,22 @@ class InlineEdit extends \Magento\Backend\App\Action
             'error' => $error
         ]);
     }
-
+    /**
+     *
+     * @param AllnewsInterface $news
+     * @param [type] $errorText
+     * @return void
+     */
     protected function getErrorWithNewsId(AllnewsInterface $news, $errorText)
     {
         return '[News ID: ' . $news->getId() . '] ' . $errorText;
     }
-
+    /**
+     * @param \Curso\News\Model\Allnews $news
+     * @param array $extendedNewsData
+     * @param array $newsData
+     * @return void
+     */
     public function setNewsData(\Curso\News\Model\Allnews $news, array $extendedNewsData, array $newsData)
     {
         $news->setData(array_merge($news->getData(), $extendedNewsData, $newsData));

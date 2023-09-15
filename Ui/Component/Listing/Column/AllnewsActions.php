@@ -1,5 +1,4 @@
 <?php
-
 namespace Curso\News\Ui\Component\Listing\Column;
 
 use Magento\Framework\App\ObjectManager;

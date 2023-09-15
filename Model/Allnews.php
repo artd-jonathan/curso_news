@@ -21,18 +21,24 @@ class Allnews extends AbstractModel implements AllnewsInterface, IdentityInterfa
     {
         $this->_init('Curso\News\Model\ResourceModel\Allnews');
     }
-	
+	/**
+     * @return array
+     */
     public function getIdentities()
     {
         return [self::CACHE_TAG . '_' . $this->getId()];
     }
-
+    /**
+     * @return array
+     */
     public function getDefaultValues()
     {
         $values = [];
         return $values;
     }
-	
+	/**
+     * @return array
+     */
 	public function getAvailableStatuses()
     {
         return [self::STATUS_ENABLED => __('Enabled'), self::STATUS_DISABLED => __('Disabled')];

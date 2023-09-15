@@ -1,5 +1,4 @@
 <?php
-
 namespace Curso\News\Model\ResourceModel\Allnews\Grid;
 
 use Magento\Framework\Api\Search\SearchResultInterface;
