@@ -1,8 +1,11 @@
 <?xml version="1.0"?>
 
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+<<<<<<< HEAD
 	<preference for="Curso\News\Api\Data\AllnewsInterface" type="Curso\News\Model\Allnews" />
 	<preference for="Curso\News\Api\AllnewsRepositoryInterface" type="Curso\News\Model\AllnewsRepository" />
+=======
+>>>>>>> 1ef197be3156e9072b2d9044409c09aa68799bc0
 	<virtualType name="AllnewsGridDataProvider" type="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider">
         <arguments>
             <argument name="collection" xsi:type="object" shared="false">Curso\News\Model\ResourceModel\Allnews\Collection</argument>

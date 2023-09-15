@@ -1,5 +1,4 @@
 <?php
-
 namespace Curso\News\Helper;
 
 use Magento\Framework\App\Helper\AbstractHelper;
