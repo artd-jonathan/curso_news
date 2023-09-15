@@ -22,7 +22,7 @@ Class ListNews extends \Magento\Framework\View\Element\Template
 	public function getListNews()
 	{
 		$page = ($this->getRequest()->getParam('p'))? $this->getRequest()->getParam('p') : 1;
-		$limit = ($this->getRequest()->getParam('limit'))? $this->getRequest()->getParam('limit') : 2;
+		$limit = ($this->getRequest()->getParam('limit'))? $this->getRequest()->getParam('limit') : 10;
 		
 		$collection = $this->allNewsFactory->create()->getCollection();
 		$collection->addFieldToFilter('status',1);
