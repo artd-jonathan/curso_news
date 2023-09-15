@@ -1,5 +1,4 @@
 <?php
-
 namespace Curso\News\Block;
 
 Class ViewNews extends \Magento\Framework\View\Element\Template
@@ -13,7 +12,10 @@ Class ViewNews extends \Magento\Framework\View\Element\Template
 		parent::__construct($context);
 		$this->allNewsFactory = $allNewsFactory;
 	}
-	
+	/**
+	 *
+	 * @return void
+	 */
 	public function getNews()
 	{
 		$id = $this->getRequest()->getParam('id');
@@ -21,14 +23,13 @@ Class ViewNews extends \Magento\Framework\View\Element\Template
 		
 		return $news;
 	}
-	
+	/**
+	 * @return void
+	 */
 	protected function _prepareLayout(){
-		
 		parent::_prepareLayout();
-		
 		$news = $this->getNews();
 		$this->pageConfig->getTitle()->set($news->getTitle());
-		
         return $this;
 	}
 }
