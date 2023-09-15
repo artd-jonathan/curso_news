@@ -1,8 +1,4 @@
 <?php
-<<<<<<< HEAD
-
-=======
->>>>>>> 1ef197be3156e9072b2d9044409c09aa68799bc0
 namespace Curso\News\Model\Allnews\Source;
 
 use Magento\Framework\Data\OptionSourceInterface;

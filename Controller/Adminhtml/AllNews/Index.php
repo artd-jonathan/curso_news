@@ -3,12 +3,6 @@ namespace Curso\News\Controller\Adminhtml\AllNews;
 
 class Index extends \Magento\Backend\App\Action
 {
-<<<<<<< HEAD
-=======
-	/**
-	 * @var \Magento\Framework\View\Result\PageFactory $resultPageFactory
-	 */
->>>>>>> 1ef197be3156e9072b2d9044409c09aa68799bc0
 	protected $resultPageFactory;
 
 	public function __construct(
